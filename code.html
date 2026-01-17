@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MENU TAP - Discover Local Menus</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c8766f",
+                        "background-light": "#fdfcfc",
+                        "background-dark": "#1e1514",
+                        "mustard": "#F4D35E",
+                        "herbal": "#7AC14B",
+                        "brand-black": "#181111"
+                    },
+                    fontFamily: {
+                        "display": ["Outfit", "sans-serif"],
+                        "sans": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        h1, h2, h3, .logo-text {
+            font-family: 'Outfit', sans-serif;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: minmax(380px, auto);
+            gap: 1.5rem;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-brand-black dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-6 lg:px-40 py-4">
+<div class="flex items-center justify-between max-w-[1200px] mx-auto">
+<div class="flex items-center gap-3">
+<div class="bg-primary text-white p-2 rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">touch_app</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-xl font-800 tracking-tight text-brand-black dark:text-white leading-none">MENU TAP</h2>
+<span class="text-[10px] font-bold text-primary tracking-[0.2em] uppercase leading-none mt-1">menutap.co</span>
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Restaurants</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Offers</a>
+<a class="text-sm font-semibold hover:text-primary transition-colors" href="#">Join Us</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="p-2 hover:bg-primary/10 rounded-full transition-colors">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="flex items-center gap-2 bg-brand-black dark:bg-white dark:text-brand-black text-white px-5 py-2.5 rounded-xl font-bold text-sm shadow-sm hover:opacity-90 transition-all">
+<span class="material-symbols-outlined text-[18px]">account_circle</span>
+<span>Sign In</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1200px] mx-auto w-full px-6 lg:px-4">
+<section class="mt-8 @container">
+<div class="relative overflow-hidden rounded-[2rem] h-[520px] flex flex-col items-center justify-center text-center p-6 group">
+<div class="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="Gourmet food arrangement with vibrant colors" style='background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAHNcs_cICLIJiRMBpkWgA06ZSc_rlUctv3UvVp5ChgjbrdhivXqEnjvnWpMkwwXQDejYilSutyyp4ifGIon7lXDXrmNoMhhpSMMS-yfLlRVDbM0gKxn6z1wd-vYENnlPNdwvv1n_b76WeZ7A3uyUaO4eORFVgzZEu0y3XG7ZDiro0DZF3KDvQnkXrwIbPzMR5_pNQQFNrbM0Dmcz1iABD920YE4_TXhxJdR0TV9UM9f58nNGjQ88JmSUuLze9DleW1Lw6kaA5wq0PU");'></div>
+<div class="relative z-10 max-w-3xl">
+<div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full mb-6">
+<span class="w-2 h-2 rounded-full bg-mustard animate-pulse"></span>
+<span class="text-white text-xs font-bold tracking-widest uppercase">Now live at menutap.co</span>
+</div>
+<h1 class="text-white text-5xl md:text-7xl font-800 leading-tight mb-6 drop-shadow-lg">
+                            Every menu, <br/><span class="text-mustard">one tap</span> away
+                        </h1>
+<p class="text-white/90 text-lg md:text-xl font-medium mb-12 max-w-xl mx-auto leading-relaxed">
+                            Discover artisanal flavors and curated menus from the finest local kitchens in your city.
+                        </p>
+<div class="flex items-center bg-white dark:bg-[#2a1e1d] p-2 rounded-2xl shadow-2xl max-w-2xl mx-auto">
+<div class="pl-4 text-primary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full border-none focus:ring-0 bg-transparent text-brand-black dark:text-white px-4 py-4 placeholder:text-gray-400 font-medium" placeholder="Search for dishes, cuisines, or restaurants" type="text"/>
+<button class="bg-primary text-white px-10 py-4 rounded-xl font-bold hover:brightness-110 transition-all whitespace-nowrap shadow-lg shadow-primary/30">
+                                Explore Menus
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<div class="mt-8 bg-mustard/15 border border-mustard/30 rounded-2xl p-4 flex items-center justify-center gap-4 text-sm font-bold text-[#5c4a0d]">
+<span class="material-symbols-outlined text-mustard">celebration</span>
+<span>EXCLUSIVE: Use code MENUTAP20 for 20% off your first checkout!</span>
+<a class="underline underline-offset-2 decoration-2 hover:text-brand-black transition-colors" href="#">Claim Now</a>
+</div>
+<section class="mt-16">
+<div class="flex items-end justify-between px-2 mb-8">
+<div>
+<h2 class="text-3xl font-800 tracking-tight">Browse Categories</h2>
+<p class="text-gray-500 text-sm mt-1 font-medium">Curated collections for every craving</p>
+</div>
+<a class="text-primary font-bold text-sm hover:underline flex items-center gap-1" href="#">
+                        View All <span class="material-symbols-outlined text-sm">chevron_right</span>
+</a>
+</div>
+<div class="grid grid-cols-3 md:grid-cols-6 gap-6">
+<div class="flex flex-col items-center gap-4 p-5 rounded-2xl border border-primary/5 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:border-primary/20 transition-all cursor-pointer group">
+<div class="size-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Freshly baked pepperoni pizza" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8qJ3ge_uCnco9G9GzIxeZrWvR_DK3Qq6PH9kuTlDtk-AmSbFkHmFo6yvCNXtIVm077rvr68jGJaLq1hrj-CAy37sCyUSJwE0_r5XMdT-t4s3qjhwKROs3QKjXg9VV7PPZdNPk34odJ3FS06vqA0da74nszy8_Mss78R2RPN0hHgKmDLFdCu28mMaxOZRQxt0txNz0psGhmFkHhsR5OOukctplo5jM0O1nWO71Fdoxp37a0HEzlhnvxXNHOHlsSAM3ctOU1zMMo7Iz");'></div>
+</div>
+<span class="font-bold text-sm tracking-tight group-hover:text-primary transition-colors">Pizza</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-5 rounded-2xl border border-primary/5 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:border-primary/20 transition-all cursor-pointer group">
+<div class="size-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Fresh sushi rolls platter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQuFp_GzixzTbn2kpK3zlzLutX-tsonP2CQ6VN0y8qDI9K5ymGjk4V2mrjHj-ZsrzGPTxMxY-_5x-vENh7i4wy3hrfF6tNJgEgt-O7S-42K7zr6K3JA-icgQAhG1kZnM_5VNrannk3qZSvXJ4gm80TYExWAB5Z2BR0G4iVi8pcTrXABp3q89lQDcI4sM8Inph3l35v_SxUtwELzrmVkoK_cBRtzJrh-TvmOnsp8Lh9DfEVSJHtNvwhTiAlyg8mRi_tuuHNkncx9vI4");'></div>
+</div>
+<span class="font-bold text-sm tracking-tight group-hover:text-primary transition-colors">Sushi</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-5 rounded-2xl border border-primary/5 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:border-primary/20 transition-all cursor-pointer group">
+<div class="size-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Juicy gourmet beef burger" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBh-yXolcsBs4utbE9npo1qUZ6pb0DXuLYGveoch0dA74z-FZEhsp8WUNe9F-gmJVSdC6MZwWWVn9FbwpquAmmVKFyB-nkLcetu4uqzYLmfw5pMGqUnsfmKKCif4PhSk_8HWWbMsUF-Gu89ZPkaZB5W50oZ76Zyf8SRl_AlSMLLdBKh3Cy4yDEO8JqFHMeyE1fhfPtXC_57D_As0CHSHPt1QoSo6cH-vykt7aHjPHD1C-SieRSj4FLSNNP1S4eu0QDgfcboc9pSiuLL");'></div>
+</div>
+<span class="font-bold text-sm tracking-tight group-hover:text-primary transition-colors">Burgers</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-5 rounded-2xl border border-primary/5 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:border-primary/20 transition-all cursor-pointer group">
+<div class="size-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Arabic mezze platter" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBKIsqKNITzbzGK833La4LthPilRIk9y_sb8ZqMRA2T3JHyMvSh1L7orhpRkstmrJSDMxVHBb3khm2Jzzg8FT575ylS6tyfBu06w8awmaFQpjPEXK594aQ68tbX7zSLpuEmULxY44XHPqzopstU4gMB_BYPqNL5DmVeXOW2FgemLgi0d3r9vebhVGMIegq_LMQBOhMpZ5p_vE8AIWPSt9gpchEuO0Myn9i7al8SWWyrCef4IQbTE-6lUpVmLJjORzYGRo8vJBLf5Mvk");'></div>
+</div>
+<span class="font-bold text-sm tracking-tight group-hover:text-primary transition-colors">Arabic</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-5 rounded-2xl border border-primary/5 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:border-primary/20 transition-all cursor-pointer group">
+<div class="size-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Fresh organic salad bowl" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBlKztXIcMg3_xLWnhCqVqu8nX18LS9hRJd-x7RxPNLbu4lOdKGkPcOQ13RY99OQpcgCjx8E27fTvF_mYrRb4vHWu3NmhGX52QL3artuUVNE5M72WQQhkl-QHMEPDLietxvuqx8jvPLz3f20t0U0ysK3_4Y_kdl9wvDbvhmUtHPYPYUNxbW-Dlm5vG3X5pdYVl6Rjv0dPPp3dczEWeTMIllL5e8YGTzFJtXUyf8P4QLXXcC2eL8JY2R_63LbKogv5YOmiC_1Q_qfMoh");'></div>
+</div>
+<span class="font-bold text-sm tracking-tight group-hover:text-primary transition-colors">Healthy</span>
+</div>
+<div class="flex flex-col items-center gap-4 p-5 rounded-2xl border border-primary/5 bg-white dark:bg-background-dark shadow-sm hover:shadow-xl hover:border-primary/20 transition-all cursor-pointer group">
+<div class="size-20 rounded-full overflow-hidden border-2 border-primary/10 group-hover:border-primary/40 transition-all p-1">
+<div class="w-full h-full rounded-full bg-cover bg-center" data-alt="Sweet chocolate dessert pastry" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBPaLvRoBcpfXpD1qitv2XzMRnmgd_ymU5ldPLInUEY-6_Q0rCyCMSZ_AAVIcTzxi-KXMzekJKEooDIsYQR0XrQkEPrUQ_SQo8Hrnk-8pCysNRvG7h_6i7vcxnae0wudqSlJkXmCclNJqPr35lFCM0fnTUgXQ6TDhK-_RHADZVURzyZG6D5J0YoNbhauR2guonCtcYWSoT_KA9rjhbwXI4DFcpDZyGvxuGJzGhNN0ZqwOvpIc99-Nv-WxHW_zgcolGgm7SGOU_I9ha");'></div>
+</div>
+<span class="font-bold text-sm tracking-tight group-hover:text-primary transition-colors">Desserts</span>
+</div>
+</div>
+</section>
+<section class="mt-20 pb-24">
+<div class="flex items-center justify-between mb-10">
+<div>
+<h2 class="text-3xl font-800 tracking-tight">Trending Menus</h2>
+<p class="text-gray-500 mt-1 font-medium">The most tapped restaurants today</p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center gap-2 px-4 py-2 border border-gray-200 dark:border-gray-800 rounded-xl hover:bg-gray-50 transition-colors text-sm font-bold">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+                            Filters
+                        </button>
+</div>
+</div>
+<div class="bento-grid">
+<div class="group relative bg-white dark:bg-background-dark rounded-[1.5rem] border border-primary/5 overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-60 w-full overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Cozy interior of a modern sourdough bakery" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCVK1nVfLftS3ULn9w4CytD7GkGpC1NqnhGqEvArXRHq0UZWr_NZlzQMRMk_VpP9ZGhLidPcov35THa3SJIK40l-SqJO_SUBfIi-5EH1XVUTKlXeRVSfdv6IIhkaQvWk-6sVnfXvExT87Wkdf7U0xv8eFp3np0xjycPZolYl7oNsI0e_Ctj_gMGNIYaXf4RllEMLHwjb-HBlFALYf8Kz2pho4W15xpwf4tOFDYl6NyNHrW3k_djGJWtbIShs8ZdPC06Nlfaqjky-7yS");'></div>
+<div class="absolute top-4 left-4 bg-herbal text-white text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">Open Now</div>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full text-primary hover:bg-primary hover:text-white transition-colors cursor-pointer shadow-sm">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">The Sourdough Lab</h3>
+<div class="flex items-center gap-1 bg-mustard/20 text-[#856404] px-2.5 py-1 rounded-lg text-xs font-bold">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span>4.9</span>
+</div>
+</div>
+<p class="text-gray-500 text-sm mb-6 font-medium">Artisanal Bakery • Sandwiches • European</p>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-gray-100 dark:border-gray-800">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Est. Delivery</span>
+<span class="text-sm font-bold">20-35 min</span>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 hover:translate-x-1 transition-all shadow-md shadow-primary/10">
+                                    View Menu <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-background-dark rounded-[1.5rem] border border-primary/5 overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-60 w-full overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Vibrant bowl of ramen with eggs and pork" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBqDtZ3-wwq5za1zXR34oY8IecIi_PsR13tU7ACSY9f2tC3FD4Jw9tycaK0ei3Ju-7iIdgSzNG00u8udBxQBhMwiM1sDJK9tljXR5_e_nq6CXeDFUirSqoMT6gZ95DGMf_4zmuDkSCFFL8-Uw5qfM9fPdJlF7BWJ4mjKmjCrvDZk9-HsJ85k3RaaziugUwWa3-oadO0VwY5yc9QcC5XNlketRw11Na7OoaTxvOQyfsgiXEqxkJFcsaO5gwMth2jQqJ-FF7Jw52a0jOp");'></div>
+<div class="absolute top-4 left-4 bg-primary text-white text-[10px] font-bold px-3 py-1.5 rounded-lg uppercase tracking-widest shadow-lg">Trending</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">Kyoto Express</h3>
+<div class="flex items-center gap-1 bg-mustard/20 text-[#856404] px-2.5 py-1 rounded-lg text-xs font-bold">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span>4.7</span>
+</div>
+</div>
+<p class="text-gray-500 text-sm mb-6 font-medium">Japanese • Ramen • Sushi • $$$</p>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-gray-100 dark:border-gray-800">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Est. Delivery</span>
+<span class="text-sm font-bold">15-25 min</span>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 hover:translate-x-1 transition-all shadow-md shadow-primary/10">
+                                    View Menu <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="group relative bg-white dark:bg-background-dark rounded-[1.5rem] border border-primary/5 overflow-hidden hover:shadow-2xl transition-all duration-500">
+<div class="h-60 w-full overflow-hidden relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="Double cheeseburger with melting cheese" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-zjIKDeYO2Lv5WVPWvaKV7nnJrJuuFw9kRFlOt178vBQr3ZHDx4LCit0rjeuh4Qcy0CuBFU6NGo3JTMOPc45eMf1nGJAeMUgL6Z3wIqEDWIQrMYyOJSGUo9YRfvmy-PtD-Qj1usTFHvzufk11XfTMQ1QwzD6n3yxybu9ng1lqFsKMo5zWzuTkp4qhrrayG4OR6nbGErm5SUuAm0U1JbXW1E1L8MadxIfXZXVhWVlcnHjl6S1Rwt8a7TDHXbXODVadrnF1AEORUEHT");'></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-3">
+<h3 class="text-xl font-bold group-hover:text-primary transition-colors">The Burger Smith</h3>
+<div class="flex items-center gap-1 bg-mustard/20 text-[#856404] px-2.5 py-1 rounded-lg text-xs font-bold">
+<span class="material-symbols-outlined text-[14px] fill-current">star</span>
+<span>4.5</span>
+</div>
+</div>
+<p class="text-gray-500 text-sm mb-6 font-medium">American • Burgers • Shakes • $$</p>
+<div class="flex items-center justify-between mt-auto pt-5 border-t border-gray-100 dark:border-gray-800">
+<div class="flex flex-col">
+<span class="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Est. Delivery</span>
+<span class="text-sm font-bold">25-40 min</span>
+</div>
+<button class="bg-primary text-white px-6 py-3 rounded-xl font-bold text-sm flex items-center gap-2 hover:translate-x-1 transition-all shadow-md shadow-primary/10">
+                                    View Menu <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<section class="bg-brand-black text-white py-20">
+<div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-md">
+<h3 class="text-3xl font-800 mb-4">Join the MENU TAP Circle</h3>
+<p class="text-gray-400 text-lg">Get weekly curated menu highlights and exclusive partner offers delivered to your inbox.</p>
+</div>
+<div class="flex w-full md:w-auto gap-3 bg-white/5 p-2 rounded-2xl border border-white/10">
+<input class="flex-1 md:w-80 rounded-xl border-none bg-transparent focus:ring-0 px-4 text-white" placeholder="Enter your email" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-105 transition-transform">Join Now</button>
+</div>
+</div>
+</section>
+<footer class="bg-white dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 py-16 px-6 lg:px-40">
+<div class="max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-12">
+<div class="col-span-2 md:col-span-1">
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-primary text-white p-1.5 rounded-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">touch_app</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xl font-800 text-brand-black dark:text-white leading-none">MENU TAP</span>
+<span class="text-[9px] font-bold text-primary tracking-[0.25em] uppercase mt-1">menutap.co</span>
+</div>
+</div>
+<p class="text-gray-500 text-sm leading-relaxed mb-6 font-medium">The most intuitive way to discover and explore menus from the best restaurants in your city.</p>
+<p class="text-primary font-bold text-sm">hello@menutap.co</p>
+</div>
+<div>
+<h4 class="font-800 text-brand-black dark:text-white mb-8 text-sm uppercase tracking-widest">Explore</h4>
+<ul class="space-y-4 text-sm text-gray-500 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Browse Restaurants</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">New Menu Drops</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Member Offers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">City Guides</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-800 text-brand-black dark:text-white mb-8 text-sm uppercase tracking-widest">Platform</h4>
+<ul class="space-y-4 text-sm text-gray-500 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">About MENU TAP</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Partner Portal</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press Kit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-800 text-brand-black dark:text-white mb-8 text-sm uppercase tracking-widest">Support</h4>
+<ul class="space-y-4 text-sm text-gray-500 font-medium">
+<li><a class="hover:text-primary transition-colors" href="#">Help Center</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">API Access</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Use</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto border-t border-gray-100 dark:border-gray-800 mt-16 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-xs text-gray-400 font-bold tracking-wide uppercase">© 2024 MENU TAP. All rights reserved. • menutap.co</p>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer transition-colors">alternate_email</span>
+<span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-gray-400 hover:text-primary cursor-pointer transition-colors">public</span>
+</div>
+</div>
+</footer>
+</div>
+
+</body></html>
